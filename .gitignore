@@ -13,6 +13,9 @@ hs_err_pid*
 
 
 .settings
-eclipse
+
 .classpath
 .project
+
+eclipse
+tmp
