@@ -1,5 +1,9 @@
 package controllers;
 
+import org.slf4j.Logger;
+
+import com.clz619.configs.LoggerConfigs;
+
 import play.mvc.Before;
 import play.mvc.Controller;
 
@@ -14,9 +18,13 @@ import play.mvc.Controller;
  * @version V1.0
  */
 public class BaseController extends Controller {
+    private static final Logger LOG = LoggerConfigs.BASE_CTRL_LOG;
 
     @Before
     public static void log() {
-
+        LOG.info("remoteAddr:{},sessionId:{},request:{}", new Object[] { request.remoteAddress, session.getId(),
+                request.url });
     }
+    
+    
 }

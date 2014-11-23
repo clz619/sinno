@@ -1,10 +1,11 @@
 package controllers.sinno;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 
 import play.Play;
 
-import com.clz619.sinno.configs.LoggerConfigs;
+import com.clz619.configs.LoggerConfigs;
 import com.clz619.sinno.mobile.logic.IMobileLogic;
 import com.clz619.sinno.mobile.logic.impl.MobileLogic;
 
@@ -30,6 +31,11 @@ public class MobileCtrl extends BaseController {
      * @return 13738106616:浙江-杭州-移动全球通卡
      */
     public static void searchMobileSegment(String mobile) {
+
+        if (StringUtils.isEmpty(mobile)) {
+            renderJSON("参数不正确");
+        }
+
         String mobileProp = mobileLogic.getMobileProp(mobile);
 
         String retStr = mobile + ":" + mobileProp;

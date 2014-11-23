@@ -1,4 +1,4 @@
-package com.clz619.sinno.configs;
+package com.clz619.configs;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,5 +15,12 @@ import org.slf4j.LoggerFactory;
  */
 public final class LoggerConfigs {
 
+    // ////////cache/////////
+    public static final Logger CACHE_JEDIS_LOG = LoggerFactory.getLogger("jedis");
+
+    // ////////ctrl/////////
+    public static final Logger BASE_CTRL_LOG = LoggerFactory.getLogger("basectrl");
+
+    // ////////logic/////////
     public static final Logger MOBILE_LOG = LoggerFactory.getLogger("mobile");
 }
