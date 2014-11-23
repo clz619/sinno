@@ -2,9 +2,10 @@
 
 require:
     - play 1.2.4
+    - play -> morphia 1.2.12
+    - play -> mybatisplay 0.3.0
+    - org.mybatis -> mybatis 3.2.8
     - redis.clients -> jedis 2.6.1
-    
-    
     
     
     
@@ -16,4 +17,5 @@ repositories:
         type: iBiblio
         root: "http://maven.oschina.net/content/groups/public/"
         contains:
-            - redis.clients -> jedis 2.6.1
+           - org.mybatis -> mybatis 3.2.8
+           - redis.clients -> jedis 2.6.1
