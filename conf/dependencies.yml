@@ -1,0 +1,19 @@
+# Application dependencies
+
+require:
+    - play 1.2.4
+    - redis.clients -> jedis 2.6.1
+    
+    
+    
+    
+    
+    
+#repositories
+
+repositories:
+    - oschina:
+        type: iBiblio
+        root: "http://maven.oschina.net/content/groups/public/"
+        contains:
+            - redis.clients -> jedis 2.6.1
