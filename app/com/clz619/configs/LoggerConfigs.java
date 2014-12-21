@@ -23,4 +23,7 @@ public final class LoggerConfigs {
 
     // ////////logic/////////
     public static final Logger MOBILE_LOG = LoggerFactory.getLogger("mobile");
+
+    // ////////job/////////
+    public static final Logger JOB_LOG = LoggerFactory.getLogger("job");
 }
